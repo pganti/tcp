@@ -1,0 +1,59 @@
+                  Assignment 2
+
+                   CS594-ipp05  revised: 8/14/05
+
+Assigned: 9/1/05
+Due: 6:00pm 9/9/05 
+
+Objective:  tcpdump/ethereal
+
+Points: 15
+
+Use tcpdump or ethereal on your personal machine for the following.
+
+ 1. do a ping  from your machine to a distant machine  (bout 3 packets)
+    use tcpdump/ethereal to capture and examine the ping packets
+   a) what IP fields are changing in packets from your machine?
+   b) what ICMP fields are changing
+   c) what data is carried in the ping packet
+   d) from the packet trace, what is the ethernet address of your machine?
+   e) what is the ethernet address of the reply packets?  what machine
+           is that?  (maybe use "arp" command)
+
+  2. do a traceroute from your machine to a distant machine (in another domain)
+     (e.g. home machine to whisper.cs.utk.edu)
+     capture and examine the traceroute packets
+   a) what is the typical flow of packets in a traceroute
+   b) what is the pattern of the TTL field of packets from your machine
+
+  3.  use tcpdump or ethereal to read  ~dunigan/ipp05/what.dmp
+   a) what are the IP addresses (dotted decimal) of two hosts?
+   b) what is RTT between hosts?
+   c) what protocol is being used?
+   d) comment on IP flag bits in the packets.
+   e) what is ether address of host sending the first packet?
+   f) what is IP ID sequence (hex) for the packets from each host?
+   g) in the 2nd packet, assume the initial ttl of the packet was (255,
+            hex ff), how many hops away is this host?
+
+  4. on one of the CS lab linux boxes (e.g. cetus1) do /sbin/ifconfig eth0
+     a) what is ether address of the machine?
+     b) what is broadcast address and   mask?
+     c) what is  IP address? 
+     d) what is global inet6 address? 
+     e) what is value MTU ?
+     f) what is value of txqueuelen?  (any idea what this affects?)
+     g) any collisions or errors?
+
+   5. Parse the following hex dump of an ip packet 
+       4500 003c 93da 4000 4006 238a c0a8 0104 c0a8 0103
+       a) what is IP version?
+       b) what is IHL? 
+       c) what is checksum (hex)?
+       d) what is total packet length (decimal)?
+       e) what is TTL? 
+       f) what is ID (hex)?
+       g) what is protocol? (decimal value and name)
+       h) what are source and destination addresses (dotted decimal)
+
+email your answers to dunigan@cs.utk.edu, with a subject of "ipp05 assignment 2"

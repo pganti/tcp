@@ -1,0 +1,64 @@
+                  Assignment 8
+
+                   CS594-ipp05  revised: 11/3/05
+
+Assigned: 10/27/05
+Due: 6:00pm 11/9/05 
+
+Objective:  ns chapter 11 
+
+Points: 25
+
+Description:
+
+
+  To run ns (and xgraph and nam) on the CS linuux lab machines (cetus/hyrdra)
+  you'll need to add some things your path and environment, 
+    see ~dunigan/ipp05/ns/README
+
+  Use the topology Tcl you created for assignment 7 to build a full ns Tcl
+  script based on the information provided in the text, section 11.8, page 270.
+  Your Tcl script for now need only produce results similar to that
+  in Table 11.2, e.g., agents on nodes s1 and d1.
+  Provide command line arguments that are the TCP/Agents for the two flows,
+  selecting from Agents  Tahoe, Reno, Newreno, e.g.
+      ns chap11.tcl Reno Newreno
+  (Careful, agent Tahoe is just Agent/TCP)
+  Report bandwidth for each Agent for the following test pairs
+         Reno  Reno
+         Tahoe Reno
+         Reno  Tahoe
+         Newreno Reno
+
+  Use the Sink agent's bytes_ variable to calculate final bandwidth.
+
+ Paste all of your results into an ANSWERS file that you submit with your
+ documented tcl source code.
+ Put all of your files in a directory and then "cd"
+ into that directory and from one of the lab machines use ~cs594ipp/594submit
+ Protect your directory with "chmod" so others can't profit from your work.
+
+
+Notes:
+You can set Agent/TCP variables for each flow, e.g.
+   set tcp0 [new Agent/TCP/$proto0]
+   $tcp0 set window_ $tcp_window
+or you can set it for all flows by saying
+Agent/TCP set window_ $tcp_window
+
+other ns variables of "interest"
+tcpTick_    (units seconds)
+packetSize_   (mss, units bytes)
+window_    (window size, units packets)
+nrexmitpack_ (retransmitted packets)
+
+and on sink   bytes_    (bytes received at sink)
+
+for Vegas
+Agent/TCP/Vegas set v_alpha_ 2
+Agent/TCP/Vegas set v_beta_ 4
+Agent/TCP/Vegas set v_gamma_ 1
+
+for each link you must set the queue size, e.g. between r1 r2, r2 r3, r3 r4
+ $ns queue-limit $r1 $r2 $qsize
+

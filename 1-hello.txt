@@ -1,0 +1,65 @@
+                  Assignment 1
+
+                   CS594-ipp05  revised: 8/14/05
+
+Assigned: 8/25/05
+Due: 6:00pm 9/2/05 
+
+Objective:  getting acquainted
+
+Points: 12
+
+Description:
+
+1) login to your CS account and send email to dunigan@cs.utk.edu
+   In the message tell me a bit about your computing background
+   (do you have a PC, what OS's do you run, type of Internet connection
+    you use, favorite programming language...),
+   interests and hobbies, and anything special you'd like to see
+   covered in the course. (Please don't disclose any information
+   that might be used against you in a court of law!)
+
+2) Rate your UNIX abilities ( ;-) ) according to the somewhat dated
+   criteria in 
+       http://www.cs.utk.edu/~dunigan/ipp05/wiz.txt
+
+3) What email address should I use for you regarding class announcements?
+
+4) Cruise the Internet, find a typical price for the following PC
+   components:
+      a)  56kb modem card
+      b) 10/100T ethernet card
+      c) GigE ethernet card
+      d) cable (or DLS) NAT/router/firewall/wireless-basestation combo
+
+5) Telnet is a useful tool for checking out what network services
+   are running on a target machine, e.g.  telnet host portnumber
+   You can break out of a telnet connection using the escape
+   sequence (usually  ctrl-]) and then type quit. 
+   From one of the CS hosts, use the telnet command to determine what
+   service (if any) is running for each of the following host-port pairs.
+
+       target host         port      hints
+   a) cetus1.cs.utk.edu     22         secret
+   b) 160.91.4.30           80         try typing  "get bob"
+   c) 160.36.56.221         25
+   d) whisper.cs.utk.edu   995    
+   e) yomega.cs.utk.edu    995    
+   f) whisper.cs.utk.edu  7777         try typing something,
+				       and then type what it replies
+   9) 160.91.212.75         23         check your watch, how many seconds 
+				       before telnet "times out", be patient
+				       or use the time command:
+					time telnet 160.91.212.75
+
+   A handy way to report results would be to "paste" the output
+   of each test along with your interpretation of what
+   service is being provided.
+   For the above telnet tests, please indicate the date and time
+   that you started the sequence of tests and the OS and IP address
+   of the machine from which you were issuing the telnet's. 
+
+6) What info do you find in the file   /etc/services
+
+email your answers to dunigan@cs.utk.edu  as a simple plain text file
+(no PDF's, DOC files, or funky attachments).

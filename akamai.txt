@@ -1,0 +1,123 @@
+http://blogs.barrons.com/techtraderdaily/2007/02/05/a-warm-good-feeling-about-akamais-acquisitiveness/
+http://oneguysinvestments.com/2006/10/is-akamai-still-smart-akam.html
+http://www.cavebear.com/cbblog-archives/000297.html
+
+
+http://www.nyquistcapital.com/2006/12/21/level3-and-akamai-the-investment-paradox/
+
+
+The New Cool
+
+Akamai overcomes the Internet's hot spot problem.
+
+By Paul Spinrad
+
+Paul Sagan says that Danny could leave the company to finish his PhD and publish his thesis, but then they'd have to kill him. Everyone else at Akamai is encouraged to complete their academic work, a slew of them at MIT, but Danny - him they'd have to off. He knows too much.
+
+Danny Lewin is an algorithms guy, and at Akamai Technologies, algorithms rule. After years of research, he and his adviser, professor Tom Leighton, have designed a few that solve one of the direst problems holding back growth of the Internet. This spring, Tom and Danny's seven-month-old company launched a service built on these secret formulas.
+
+The Akamai solution recalls great historical shifts - discoveries of better, faster ways - like the invention of Arabic numerals, or the development of seafaring. Take the latter: For most of prehistory, people traveled exclusively over land. Then, around 5,000 years ago, they discovered that floating cargo on water was easier than lugging it across terrain - no mountains to climb, no roads to negotiate. Seafaring transformed most of the world's surface from unusable space into a vast ubiquitous shortcut, a portal to faraway lands and great riches. Natural harbors blossomed into sophisticated cities. And although societies continued exchanging goods with their neighbors over land, the first world powers, the first empires, commanded the seas.
+
+In some ways, sending information around the traditional Internet resembles human transport, pre-Phoenicia. The Net was originally designed like a series of roads connecting distinct sources of content. Different servers, physical hardware, specialized in their own individual data domains. As first conceived, an address like nasa.gov would always correspond to dedicated servers located at a NASA facility. When you visited www.ksc.nasa.gov to see a shuttle launch, you connected to NASA's servers at Kennedy Space Center, just as you traveled to Tivoli for travertine marble instead of picking it up at your local port. When you ran a site, your servers and only your servers delivered its content.
+
+This routing system worked fine for years, but as users move to fatter pipes, like DSL and broadband cable, and as event-driven supersites emerge, the protocols tying information to location cause a bottleneck. Back when The Starr Report was posted, Congress' servers couldn't keep up with hungry surfers. When Victoria's Secret ran its Super Bowl ad last February, similar lusts went unsated. The Heaven's Gate site in 1997 quickly followed its cult members into oblivion. And when The Phantom Menace trailers hit the Web this spring, a couple of sites distributing them went down.
+
+This is the "hot spot" problem: When too many people visit a site, the excessive load heats it up like an overloaded circuit and causes a meltdown. Just as something on the Net gets interesting, access to it fails.
+
+For more time-critical applications, the stakes are higher. When the stock market lurches and online traders go berserk, brokerage sites can hardly afford to buckle. In retail, slow responses will send impatient customers clicking over to the competition. Users may have Pentium IIIs and ISDN lines, but when a site can't keep up with demand, they feel like they're on a slow dialup. And users on relatively remote parts of the network - even tech hubs like Singapore - often suffer slow responses, not just during peak traffic.
+
+ISPs address this problem by adding connections, expanding capacity, and running server farms to host client sites on many machines, but this still leaves content clustered in one place on the network. Publishers can mirror sites at multiple hosting companies, helping to spread out traffic, but this means duplicating everything everywhere, even the files no one wants. A third remedy, caching, temporarily stores copies of popular files on servers closer to the user, but out of the original site's control. Naturally, site publishers don't like this - it delivers stale content, preserves errors, and skews usage stats. In other words, massive landlock.
+
+So in 1998, with their new algorithms in hand, Tom Leighton and Danny Lewin found themselves facing a sort of manifest destiny. The Web's largest sites were straining to meet demand - and frequently failing. Most needed better traffic handling, a way to cool down hot spots and speed content delivery overall. And Tom and Danny had conceived a solution, a grand-scale alternative to the Net's routing system.
+
+In September, a California company called Sandpiper Networks introduced a service perilously similar to what they'd envisioned, but Tom and Danny's load-balancing solution was one step more radical, and the problem was plenty big for two contenders. Paul Sagan, a content guy from Time Warner's Pathfinder, signed up to lead them, and the Cambridge, Massachusetts-based startup began building its own globe-spanning network of servers that would handle Web content in a brand-new way.
+
+It worked. With Akamai's FreeFlow service, all content pours through the entire network, instantly responding to demand, ebbing and flowing as needed, changing routes and locations in response to current conditions. Its ocean of servers connects to the terra firma of the rest of the Net at scores of ports, all of which move data more quickly as conditions continually change.
+
+
+No Fixed Address
+
+In January, Akamai began running beta versions of FreeFlow, serving content for ESPN.com, Paramount Pictures, Apple, and other high-volume clients. (Akamai withholds the names of the others, but you can tell if a site is using the service by viewing the page source and looking for akamaitech.net in the URLs. A cursory test reveals "Akamaized" content at Yahoo! and GeoCities.)
+
+ESPN.com and Paramount have been good beta testers - ESPN.com because it requires frequent updates and is sensitive to region as well as time, and Paramount because it delivers a lot of pipe-hogging video. On March 11, while ESPN was covering the first day of NCAA hoops' March Madness, Paramount's Entertainment Tonight Online posted the second Phantom Menace trailer. FreeFlow handled up to 3,000 hits per second for the two sites - 250 million in total, many of them 25-Mbyte downloads of the trailer. But the system never exceeded even 1 percent of its capacity. In fact, as the download frenzy overwhelmed other sites, Akamai picked up the slack. Before long, Akamai became the exclusive distributor of all Phantom Menace QuickTimes, serving both of the official sites, starwars.com and apple.com.
+
+So how does it work? Companies sign up for Akamai's FreeFlow, agreeing to pay according to the amount of their traffic. Then they run a simple utility to modify tags, and the Akamai network takes over. Throughout the site, the system rewrites the URLs of files, changing the links into variables to break the connection between domain and location. On www.apple.com, for example, the link www.apple.com/home/media/menace_640qt4.mov, specifying the 640 x 288 Phantom Menace QuickTime trailer, might be rewritten as a941.akamai.com/7/941/51/256097340036aa/www.apple.com/home/media/menace_640qt4.mov. Under standard protocols, a941.akamaitech.net would refer to a particular machine. But with Akamai's system, the address can resolve to any one of hundreds of servers, depending on current conditions and where you are on the Net. And it can resolve a different way for someone else - or even for you, a few seconds later. (The /7/941/51/256097340036aa in the URL is a fingerprint string used for authentication.) This new method is more complicated, but like modern navigation, it opens new vistas of capacity and commerce.
+
+Sandpiper remains Akamai's only direct competitor. In April it signed a deal with AOL and Inktomi to begin serving their sites and incorporating their servers into the Sandpiper network. But a month out of the starting gate, Akamai was running immediately neck and neck with its rival, both promising more than 1,000 servers by the end of the year.
+
+
+Academic Hot Spot
+
+Partly because it arrived second, Akamai has had to differentiate its product. The company has done this not only by focusing on fine points of the technology, but also by positioning itself as the intelligent solution. FreeFlow is the masterwork of leading scientists from MIT.
+
+What's more, the scientists of Akamai are algorithms people. Whereas network hackers tend to be masters of improvisation, spotting local problems and using intuition and quick experimentation to fire off fixes, algorithms people tend to be slower and more rigorous, examining and proving everything along the way. They start with the most pared-down problems - sorting numbers, stacking rectangles, connecting dots - and build up to more complicated situations. They study how efficiently computer programs run under all conditions - the best, average, and worst-possible cases - as the mass of processors, connections, and information become infinitely large. It may take them a while to find a solution they like, but when they do, they know it will work, both on paper and in any reality.
+
+    This is the hot spot phenomenon: just as something on the Net gets interesting, access to it fails.
+
+So network growth doesn't scare algorithms people; they always push things to infinity anyway.
+
+You can trace Akamai's genesis to LCS, MIT's Laboratory for Computer Science, where Tim Berners-Lee's World Wide Web Consortium and Tom Leighton's algorithms group both have their offices. In 1995 Tim asked Tom if he thought distributed algorithms could reliably solve the hot spot problem, and Tom's algorithms posse was intrigued. The problem raised interesting theoretical issues, the group's forte, while at the same time the graphs of nodes and edges they drew on whiteboards represented actual machines and Net connections. Real-world relevance! Several semesters and ideas later - some published, some still proprietary - Tom and Danny had blueprints for server software that would cool down traffic everywhere. But better, they had formally proven that most of their algorithms were optimal. In other words, different solutions might give equally good results, but none could ever possibly do better.
+
+For their nonoptimal algorithms, Tom and Danny demonstrated that the problems were, in computer-science shorthand, "hard" problems. This means there are no major shortcuts to finding the best solution; the problem is inherently difficult, and you just have to do the best you can with finite time and computational resources.
+
+Lastly, Tom and Danny knew with total certainty that, given their descriptions of the hot spot problem and the workings of the Net, the larger the network grew, the better their solution would perform. They not only had a solution, they had a solution that was literally - demonstrably - unbeatable.
+
+
+La Sauce Est Tout
+
+The name Akamai means "clever" in Hawaiian, or more colloquially, "cool." At Danny's suggestion, the team found it by trying out words in an online English-Hawaiian dictionary. In a sense, FreeFlow is an attempt to put smartness into the Web page, the URL, and the network itself.
+
+Although at first Akamai's founders imagined selling their traffic-calming solution as server software - ISPs would buy it and install it themselves to boost performance - they soon realized they should be a service for publishers, content providers, and ecommerce companies of all kinds, not a software company. With Akamai's service, publishers could forget about servers and ISPs, and concentrate on content. Akamai would run its software on its own broadly deployed server network and sell guaranteed fast delivery, subscription style. The idea was to work with as many ISPs as possible to create a new layer of infrastructure on top of the Net, a fluid system that would run everywhere and reach out to remote populations.
+
+Small ISPs operate at a single location; the big ones have their own subnetworks encompassing multiple POPs in different locations. Both are basically facilities where a bunch of servers share one or more network connections. Akamai calls these facilities "regions," and to get close to all users, the company tries to locate its servers in as many regions as it can. Singapore's SingNet has Akamai servers in its single region, while Teleglobe has them all over. Partnering ISPs small and large benefit from improved capacity, while their users get faster delivery of FreeFlow sites. (The company targets content providers and ecommerce sites, but hopes to cultivate an Intel-style status among consumers as well, who would look for ISPs with "Akamai Inside.")
+
+So Akamai servers are in diaspora, but they remain clannish. They keep in constant contact with each other all over the map, speaking their own special dialect of Linux. Each region has one mapping server and one or more content servers. All content servers, no matter where they are, are eligible to serve any content. The mapping servers monitor the local state of the network: How fast are the current connections to neighboring regions? Which connections seem to have gone down completely? They figure out which servers should carry which files, and then how to evenly distribute the hits for a requested file among the servers that carry it.
+
+Web pages themselves break down into units: the HTML page plus each embedded file it contains - images, animations, sounds, video. Akamai's system wisely leaves the HTML alone and scatters only the embedded elements, the rationale being that these larger files cause the traffic jams, while plain HTML is fast and cheap. In a big cafeteria, FreeFlow might pick up your meat loaf, green beans, and rice pudding at three different counters, calculating which steam tables look hotter and where the lines are long. But your tray, the HTML, always comes from the same place. Keeping the HTML on the home server also keeps the user database and customization scripts in one place, where publishers want them.
+
+When a user requests a file, the mapping servers decide on a content server in two stages: They choose first the best region and then the content server within that region. In computer-science terms, the first stage represents a classic "min-cost" flow problem, where the cost associated with each hop between neighboring regions - or how easy it is for traffic to flow between them - is weighted. As traffic conditions change, the mapping servers update these weights and continually find a low-cost route based on a user's place on the network. As Akamai and Sandpiper both know, this is an expensive, "hard" calculation. The mapping servers have to be fast.
+
+Within a region, for the second stage of routing, the system divides the traffic evenly among all the servers using "consistent hashing," a wonderful double-randomized hashing algorithm that Danny invented, earning him MIT's 1998 Morris Joseph Lewin Award (no relation) for best master's thesis. Simple hashing algorithms, which assign objects to locations the way a card dealer deals out hands, break down completely when players drop out or come in; the original formula for who will receive what card, which relies on knowing the number of players, no longer works. But consistent hashing splits up and mixes the assignments so thoroughly, while still using a fairly simple formula, that if locations drop out and throw things off, the correct location will still be close by. As more server problems and network glitches arise, the algorithm has to do more second-guessing, but it achieves the best results possible in an unsteady environment.
+
+Routing and spreading the hits intelligently is important, but it isn't the whole solution. The real hot spot cooler is balancing the content load - determining which servers should have which files in the first place, before they fulfill requests routed to them. Akamai's solution replicates the popular files on multiple servers, spreads total loads evenly, and minimizes copying files around. The ingenious algorithm underlying this process is Akamai's secret sauce, and as the French say, the sauce is everything.
+
+
+    It was a solution that was literally - demonstrably - unbeatable.
+
+Cambridge Dons
+
+Underlying algorithms aside, a private network service business is a different beast entirely from a software business - for one thing, it requires far more money.
+
+Discovered by Battery Ventures through MIT's student-run "$50K" Entrepreneurship Competition (the Akamai team failed to win the trial's whopping $50,000 grant for starting a new business, though the winner turned out virtuous and offered to split the take with the four other finalists), Akamai later secured funding from several angel investors. Among them were Gil Friesen (formerly of Classic Sports) and Art Bilger (formerly of Apollo Fund and New World Communications). Polaris Venture Partners of Boston and Seattle also joined, and by the end of 1998 the startup had more than $8 million in first-round funding.
+
+The talent snowballed. Battery Ventures' Todd Dagres recruited Paul Sagan as chief operating officer last January. In March David Goodtree joined as head of marketing, after years of studying the IT industry at Forrester Research. In April George Conrades became Akamai's CEO and chair. At BBN George had overseen the acquisition of Genuity, authors of the traffic-management software tool Hopscotch, and when he learned about Akamai, it seemed the perfect big-thinking, out-of-the-box idea: a Hopscotch for the entire Internet. Everyone believed.
+
+Today Akamai employs about 130 people. Many are MIT students, both graduate and undergrad. But alongside them in the trenches is a surprising number of actual faculty on temporary leave - full professors and associate professors from places like MIT, Carnegie Mellon, and UC Berkeley.
+
+
+The Sandpiper Approach
+
+Akamai and Sandpiper are not the first in their field of distributed traffic management. Older systems, many still available and useful, perform sophisticated routing and load balancing over groups of servers installed on a single subnetwork. Companies like Cisco (DistributedDirector), GTE Internetworking (which acquired BBN and with it Genuity's Hopscotch), and Resonate (Central Dispatch) have been selling such solutions as installable software or hardware. Digex and GTE Internetworking (Web Advantage) offer hosting that uses intelligent load balancing and routing within a single ISP. These work like Akamai's and Sandpiper's services, but with a narrower focus.
+
+But only Akamai and Sandpiper are selling the service of whole server networks spanning numerous ISPs, and only Akamai and Sandpiper use the trick of rewriting URLs as a hook into the alternative system.
+
+Both companies' services are powerful, but they're not identical. Footprint customers specify which part of their content the system should handle by defining rules through a user interface, rather than by adding tag lines to page source. Sites project expected traffic levels ahead of time and pay for levels of service, rather than paying by the meter.
+
+Footprint users can choose from many content distribution options - some simple, some advanced - for different parts of a site, while FreeFlow optimizes everything automatically. Footprint also distributes HTML, not just embedded files, spreading database information through the network. Akamai leaves HTML at home.
+
+Under unusual circumstances, Footprint may be less bulletproof than FreeFlow, but it has proven itself well. It kept The Starr Report available on the Los Angeles Times site, when many others buckled, and served Intuit's site reliably all through tax season. As long as speed is scarce on the Net, the two companies are going to find fans.
+
+Both companies, if they continue to grow, will route traffic more efficiently over the Net as a whole, increasing delivery speeds for subscribers and nonsubscribers as well. But there's a downside. Content delivered via these subscription-based networks will make content routed by the old, free Internet seem slow. A page that loads in six seconds seems fine until you visit one that loads in four. This effect will be magnified as people upgrade their connections to DSL and broadband cable. With fatter pipes, users will demand more information-intensive experiences, and the newly available last-mile bandwidth will be filled up with fast, dazzling content from supersites, served from networks like Akamai. ESPN.com will appear instantly, but you'll have to wait an age for anything homegrown or poorly financed.
+
+Others argue, however, that the Internet is already a tiered environment, where cash-rich content providers can add more and more hardware to improve delivery, while your cousin's homepage, with no traffic management resources behind it, is already slow. Akamai and Sandpiper just allow more publishers to tap into premium services.
+
+Either way you look at it, the stakes are high. The winner, if there is one, will have its hand in the major revenue-generating sites on the Web. More than any other company in the medium's short history, the winner will own the Net - or at least the parts of it that pay.
+
+
+Sea Change
+
+Akamaiians compare their company to FedEx, delivering content faster and more reliably than the old USPS. It's not a bad comparison - as good, at least, as the glorious advent of sea travel thousands of years before Christ - but it raises the specter of huge capital needs and about 10 more years till ubiquity.
+
+    Akamai wants to be everywhere: says Paul, "a server in every POP."
+
+Yet in less than a year, the little-known company is well on its way toward global domination. Akamai wants to be universal, as widespread as the Net itself, with, in Paul's terms, "a server in every POP." If the company has its way, every computer on the Net will connect to Akamai servers, which will push and pull content around with the tides, constantly running calculations on the turbulence and fluid dynamics of information. As each new site and ISP signs on, Akamai's ocean will swell, carrying ships ever closer to their final goals. For now at least, the ordinary user ought to be glad that the company in charge of the Earth's oceans wants only to give each of us beachfront property. 
